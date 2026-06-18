@@ -29,4 +29,5 @@ export const loginValidation = (req: Request, res: Response, next: NextFunction)
     return;
   }
   next();
+
 };

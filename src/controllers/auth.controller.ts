@@ -127,4 +127,5 @@ export const uploadAvatar = async (req: AuthRequest, res: Response): Promise<voi
     console.error('❌ Avatar upload error:', error);
     sendError(res, 'Upload failed', 500, error);
   }
+
 };

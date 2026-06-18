@@ -3,6 +3,7 @@ import { summarize, quiz, studyPlan, getHistory } from '../controllers/ai.contro
 import { protect } from '../middleware/auth.middleware';
 
 
+
 const router = Router();
 router.use(protect);
 router.post('/summarize',   summarize);

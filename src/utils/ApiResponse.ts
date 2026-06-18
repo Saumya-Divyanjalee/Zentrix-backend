@@ -8,6 +8,7 @@ export const sendError = (res: Response, message = 'Error', statusCode = 500, er
   res.status(statusCode).json({ success: false, message, error });
 };
 
+
 export const sendCreated = (res: Response, data: unknown, message = 'Created'): void => {
   sendSuccess(res, data, message, 201);
 };

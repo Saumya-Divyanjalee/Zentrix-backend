@@ -52,6 +52,7 @@ const callGemini = (prompt: string): Promise<string> => {
   });
 };
 
+
 export const summarizeNote = (content: string) =>
   callGemini(`Summarize this study note in clear bullet points. Be concise and student-friendly:\n\n${content}`);
 

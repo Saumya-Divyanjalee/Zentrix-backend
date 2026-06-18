@@ -6,6 +6,7 @@ export interface JwtPayload {
   role: string;
 }
 
+
 export interface AuthRequest extends Request {
   user?: JwtPayload;
 }

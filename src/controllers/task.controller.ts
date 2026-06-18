@@ -47,4 +47,5 @@ export const deleteTask = async (req: AuthRequest, res: Response): Promise<void>
     if (!task) { res.status(404).json({ success: false, message: 'Task not found' }); return; }
     sendSuccess(res, null, 'Task deleted');
   } catch (error) { sendError(res, 'Server error', 500, error); }
+
 };

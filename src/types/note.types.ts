@@ -5,4 +5,5 @@ export interface CreateNoteDto {
 }
 export interface UpdateNoteDto extends Partial<CreateNoteDto> {
   summary?: string;
+
 }

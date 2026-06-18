@@ -30,4 +30,5 @@ export const sendWelcomeEmail = async (toEmail: string, name: string): Promise<v
   } catch (error) {
     console.error('❌ Email send error:', error);
   }
+
 };

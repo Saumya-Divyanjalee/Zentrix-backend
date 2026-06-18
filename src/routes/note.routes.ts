@@ -3,6 +3,7 @@ import { getNotes, getNoteById, createNote, updateNote, deleteNote } from '../co
 import { protect } from '../middleware/auth.middleware';
 import { createNoteValidation } from '../validators/note.validator';
 
+
 const router = Router();
 router.use(protect);
 router.get('/',     getNotes);

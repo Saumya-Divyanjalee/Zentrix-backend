@@ -16,6 +16,7 @@ const AIHistorySchema = new Schema<IAIHistory>(
     userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   },
   { timestamps: true }
+
 );
 
 export default mongoose.model<IAIHistory>('AIHistory', AIHistorySchema);

@@ -58,6 +58,7 @@ export const studyPlan = async (req: AuthRequest, res: Response): Promise<void> 
   }
 };
 
+
 export const getHistory = async (req: AuthRequest, res: Response): Promise<void> => {
   try {
     const history = await AIHistory.find({ userId: req.user?.id }).sort({ createdAt: -1 }).limit(50);

@@ -45,4 +45,5 @@ export const deleteNote = async (req: AuthRequest, res: Response): Promise<void>
     if (!note) { res.status(404).json({ success: false, message: 'Note not found' }); return; }
     sendSuccess(res, null, 'Note deleted');
   } catch (error) { sendError(res, 'Server error', 500, error); }
+
 };

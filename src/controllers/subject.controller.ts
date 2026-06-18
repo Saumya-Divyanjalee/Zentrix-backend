@@ -37,4 +37,5 @@ export const deleteSubject = async (req: AuthRequest, res: Response): Promise<vo
     if (!subject) { res.status(404).json({ success: false, message: 'Subject not found' }); return; }
     sendSuccess(res, null, 'Subject deleted');
   } catch (error) { sendError(res, 'Server error', 500, error); }
+
 };

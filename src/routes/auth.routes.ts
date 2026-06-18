@@ -4,6 +4,7 @@ import { protect } from '../middleware/auth.middleware';
 import { registerValidation, loginValidation } from '../validators/auth.validator';
 import { upload } from '../middleware/upload.middleware';
 
+
 const router = Router();
 router.post('/register', registerValidation, register);
 router.post('/login',    loginValidation,    login);

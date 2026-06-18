@@ -9,4 +9,5 @@ export interface CreateTaskDto {
   status?: TaskStatus;
   subject?: string;
 }
+
 export interface UpdateTaskDto extends Partial<CreateTaskDto> {}

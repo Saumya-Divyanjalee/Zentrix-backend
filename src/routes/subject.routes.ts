@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { getSubjects, createSubject, updateSubject, deleteSubject } from '../controllers/subject.controller';
 import { protect } from '../middleware/auth.middleware';
 
+
 const router = Router();
 router.use(protect);
 router.get('/',     getSubjects);

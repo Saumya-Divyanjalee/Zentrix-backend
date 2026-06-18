@@ -3,6 +3,7 @@ import { getTasks, getTaskById, createTask, updateTask, deleteTask } from '../co
 import { protect } from '../middleware/auth.middleware';
 import { createTaskValidation } from '../validators/task.validator';
 
+
 const router = Router();
 router.use(protect);
 router.get('/',     getTasks);

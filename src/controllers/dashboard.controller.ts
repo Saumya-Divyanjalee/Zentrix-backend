@@ -44,4 +44,5 @@ export const getDashboardStats = async (req: AuthRequest, res: Response): Promis
   } catch (error) {
     sendError(res, 'Server error', 500, error);
   }
+
 };
