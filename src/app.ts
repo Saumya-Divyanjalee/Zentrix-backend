@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (_req, res) => {
   res.json({
     success: true,
-    message: 'Zentrix API v2.0 ✅',
+    message: 'Zentrix API v2.0 ',
     version: '2.0.0',
     endpoints: {
       auth:      '/api/auth',

@@ -29,7 +29,7 @@ export const register = async (req: Request, res: Response): Promise<void> => {
       refreshToken,
     }, 'Registration successful');
   } catch (error) {
-    console.error('❌ Register error:', error);
+    console.error(' Register error:', error);
     sendError(res, 'Server error', 500, error);
   }
 };
@@ -53,7 +53,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       refreshToken,
     }, 'Login successful');
   } catch (error) {
-    console.error('❌ Login error:', error);
+    console.error(' Login error:', error);
     sendError(res, 'Server error', 500, error);
   }
 };
@@ -83,7 +83,7 @@ export const refreshAccessToken = async (req: Request, res: Response): Promise<v
     const newAccessToken = generateAccessToken(user.id, user.email, user.role);
     sendSuccess(res, { accessToken: newAccessToken }, 'Access token refreshed');
   } catch (error) {
-    console.error('❌ Refresh token error:', error);
+    console.error(' Refresh token error:', error);
     sendError(res, 'Server error', 500, error);
   }
 };
@@ -97,7 +97,7 @@ export const getProfile = async (req: AuthRequest, res: Response): Promise<void>
     }
     sendSuccess(res, user);
   } catch (error) {
-    console.error('❌ Get Profile error:', error);
+    console.error(' Get Profile error:', error);
     sendError(res, 'Server error', 500, error);
   }
 };
@@ -125,7 +125,7 @@ export const updateProfile = async (req: AuthRequest, res: Response): Promise<vo
     const updatedUser = await User.findById(req.user?.id).select('-password');
     sendSuccess(res, updatedUser, 'Profile updated');
   } catch (error) {
-    console.error('❌ Update Profile error:', error);
+    console.error(' Update Profile error:', error);
     sendError(res, 'Server error', 500, error);
   }
 };
@@ -155,7 +155,7 @@ export const uploadAvatar = async (req: AuthRequest, res: Response): Promise<voi
 
     sendSuccess(res, user, 'Avatar uploaded');
   } catch (error) {
-    console.error('❌ Avatar upload error:', error);
+    console.error(' Avatar upload error:', error);
     sendError(res, 'Upload failed', 500, error);
   }
 };

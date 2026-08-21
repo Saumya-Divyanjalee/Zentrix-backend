@@ -11,15 +11,14 @@ const callGemini = (prompt: string): Promise<string> => {
 
     const body = JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] });
 
-    // නවතම AQ... API Keys සඳහා ගැළපෙන පරිදි සකස් කල HTTPS options
-    const options = {
+     const options = {
       hostname: 'generativelanguage.googleapis.com',
-      path: `/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,// URL එකෙන් ?key= කොටස ඉවත් කර ඇත
+      path: `/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json', 
         'Content-Length': Buffer.byteLength(body),
-        'x-goog-api-key': apiKey // API Key එක ආරක්ෂිතව Header එකක් ලෙස යවයි
+        'x-goog-api-key': apiKey 
       },
     };
 

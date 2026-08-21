@@ -23,7 +23,7 @@ export const summarize = async (req: AuthRequest, res: Response): Promise<void> 
     }
     sendSuccess(res, { summary }, 'Summary generated');
   } catch (error) {
-    console.error('❌ AI summarize error:', error);
+    console.error(' AI summarize error:', error);
     sendError(res, 'AI service error', 500, error);
   }
 };
@@ -38,7 +38,7 @@ export const quiz = async (req: AuthRequest, res: Response): Promise<void> => {
 
     sendSuccess(res, { questions }, 'Quiz generated');
   } catch (error) {
-    console.error('❌ AI quiz error:', error);
+    console.error(' AI quiz error:', error);
     sendError(res, 'AI service error', 500, error);
   }
 };
@@ -53,7 +53,7 @@ export const studyPlan = async (req: AuthRequest, res: Response): Promise<void> 
 
     sendSuccess(res, { plan }, 'Study plan generated');
   } catch (error) {
-    console.error('❌ AI study plan error:', error);
+    console.error(' AI study plan error:', error);
     sendError(res, 'AI service error', 500, error);
   }
 };

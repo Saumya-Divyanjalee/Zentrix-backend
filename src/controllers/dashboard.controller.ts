@@ -41,7 +41,7 @@ export const getDashboardStats = async (req: AuthRequest, res: Response): Promis
       recentTasks,
     }, 'Dashboard stats fetched');
   } catch (error) {
-    console.error('❌ Dashboard stats error:', error);
+    console.error(' Dashboard stats error:', error);
     sendError(res, 'Server error', 500, error);
   }
 };
@@ -56,7 +56,7 @@ export const getAdminStats = async (_req: AuthRequest, res: Response): Promise<v
 
     sendSuccess(res, { totalUsers, totalTasksAllUsers, totalNotesAllUsers }, 'Admin stats fetched');
   } catch (error) {
-    console.error('❌ Admin stats error:', error);
+    console.error(' Admin stats error:', error);
     sendError(res, 'Server error', 500, error);
   }
 };
